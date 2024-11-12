@@ -46,17 +46,11 @@ elif opcion == 'Competitivo':
     st.video(video_url)
      <p style='color: white;'>Características principales del competitivo de LoL:
 Ligas profesionales: Existen ligas regionales en todo el mundo, como la LCS (Liga de Campeones de América del Norte), la LEC (Liga Europea de Campeones), la LCK (Liga Coreana de Campeones) y la LPL (Liga China de Campeones). Estas ligas son de gran prestigio y agrupan a los mejores equipos de cada región.
-
 Torneos internacionales: El evento más importante es el Campeonato Mundial de LoL (World Championship o Worlds), que reúne a los mejores equipos de todas las ligas regionales. Además, existe el Mid-Season Invitational (MSI), que reúne a los campeones de cada región para competir en una serie de enfrentamientos a mitad de temporada.
-
 Formato de competencia: Los equipos compiten en un formato de liga, donde se enfrentan a otros equipos a lo largo de varias semanas. Los mejores equipos avanzan a playoffs, donde compiten por el campeonato de su liga o por un lugar en torneos internacionales.
-
 Equipos y jugadores: Los equipos en el competitivo de LoL están formados por cinco jugadores, cada uno especializado en un rol específico (top, jungla, mid, bot y support). Además, los entrenadores y el personal de análisis de datos juegan un papel fundamental para el rendimiento del equipo.
-
 Aspectos técnicos y estratégicos: Las partidas competitivas de LoL son muy tácticas. Los equipos deben coordinarse bien, gestionar recursos como el oro y los objetos, tomar decisiones en tiempo real y ejecutar estrategias complejas. Los cambios en los parches (actualizaciones del juego) y las selecciones de campeones son elementos cruciales en cada enfrentamiento.
-
 Aficionados y transmisiones: Los partidos de LoL son transmitidos en plataformas como Twitch, YouTube y loL Esports, donde los aficionados pueden ver los partidos en vivo, seguir análisis y comentar en tiempo real.
-
 Cultura de esports: La escena competitiva de LoL ha generado una enorme comunidad global de jugadores, aficionados, creadores de contenido y patrocinadores. Los jugadores profesionales son considerados figuras públicas dentro del mundo de los deportes electrónicos, con gran cantidad de seguidores en redes sociales.</p>
     """, unsafe_allow_html=True)
 elif opcion == 'Acerca de':
