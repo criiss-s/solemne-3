@@ -28,8 +28,8 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
 
-st.image("imagenes/letras.png")
-st.sidebar.image("imagenes/logo.png")
+st.image("letras.png")
+st.sidebar.image("logo.png")
 
 
 if opcion == 'Información':
