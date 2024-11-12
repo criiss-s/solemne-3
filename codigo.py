@@ -44,8 +44,8 @@ elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
-     <p style='color: white;'>aaa</p>
-    """, unsafe_allow_html=True)
+    st.markdown("<h1 style='color: white;'>aksdksakdaskdsakdksadkasdk</h1>", unsafe_allow_html=True)
+    
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
 
