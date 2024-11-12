@@ -25,11 +25,12 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+st.sidebar.image("letras.png")
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
 
 st.image("League-of-Legends-logo.png")
-st.sidebar.image("letras.png")
+
 
 
 if opcion == 'Información':
