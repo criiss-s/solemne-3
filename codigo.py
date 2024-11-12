@@ -28,7 +28,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
 
-st.image("letras.png")
+st.image("League-of-Legends-logo.png")
 st.sidebar.image("logo.png")
 
 
