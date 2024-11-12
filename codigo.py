@@ -29,7 +29,7 @@ opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campe
 
 
 st.image("League-of-Legends-logo.png")
-st.sidebar.image("logo.png")
+st.sidebar.image("letras.png")
 
 
 if opcion == 'Información':
