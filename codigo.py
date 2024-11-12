@@ -14,6 +14,16 @@ def get_base64_of_bin_file(bin_file):
 bg_image_path = "fondo.jpg"
 bg_image_base64 = get_base64_of_bin_file(bg_image_path)
 
+page_bg_img = f"""
+<style>
+    .stApp {{
+        background-image: url("data:image/jpg;base64,{bg_image_base64}");
+        background-size: cover;
+        background-position: center;  /* Centra la imagen */
+    }}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
