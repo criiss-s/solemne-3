@@ -46,6 +46,7 @@ elif opcion == 'Competitivo':
     st.video(video_url)
     st.markdown("<h1 style='color: white;'>aksdksakdaskdsakdksadkasdk</h1>", unsafe_allow_html=True)
     st.selectbox("Pick one", ["cats", "dogs"])
+    st.image("E8wlKQLWQAEuBRw.jpg")
     
     
 elif opcion == 'Acerca de':
