@@ -45,8 +45,8 @@ elif opcion == 'Competitivo':
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
     st.markdown("<h1 style='color: white;'>aksdksakdaskdsakdksadkasdk</h1>", unsafe_allow_html=True)
-    st.subheaderLeague("adjasdjia")
     st.selectbox("Pick one", ["cats", "dogs"])
+    
     
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
