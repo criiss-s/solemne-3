@@ -44,7 +44,7 @@ elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
-    st.markdown("<h1 style='color: white;'>El Campeonato mundial de League of Legends, también conocido como Worlds, es un torneo anual de League of Legends organizado por Riot Games y que supone la culminación de cada temporada. Los equipos compiten por el título de campeón, la Copa del Invocador, y un premio de varios miles de dólares.​</h1>", unsafe_allow_html=True)
+    st.write("<h1 style='color: white;'>El Campeonato mundial de League of Legends, también conocido como Worlds, es un torneo anual de League of Legends organizado por Riot Games y que supone la culminación de cada temporada. Los equipos compiten por el título de campeón, la Copa del Invocador, y un premio de varios miles de dólares.​</h1>", unsafe_allow_html=True)
     
     
 elif opcion == 'Acerca de':
