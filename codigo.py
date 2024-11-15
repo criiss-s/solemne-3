@@ -45,8 +45,7 @@ elif opcion == 'Competitivo':
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
     st.markdown("<h1 style='color: white;'>aksdksakdaskdsakdksadkasdk</h1>", unsafe_allow_html=True)
-    st.subheaderLeague("<h1 style='color: white;'>of Legends es la competición profesional del videojuego de arena de batalla en línea multijugador League of Legends . Está desarrollado y publicado por Riot Games y se lanzó por primera vez en 2009. Los torneos profesionales comenzaron en 2011 con el Campeonato Mundial de la Temporada 1 en DreamHack en Jönköping, Suecia.</p>
-    """, unsafe_allow_html=True)
+    st.subheaderLeague('adasdasd')
     st.selectbox("Pick one", ["cats", "dogs"])
     
 elif opcion == 'Acerca de':
