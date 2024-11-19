@@ -75,6 +75,21 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Dentro del competitivo del league of legends se implementa una clase de bracket (Cuadro) el cual permite mostrar el progreso de los equipos a lo largo de un torneo, asi para que la gente sepa si su equipo favorito paso a la siguiente fase. El bracket mostrado corresponde al bracket suizo de los worlds 2024 con equipos reconocidos como G2, GenG, T1, FNC, etc. p>
     </div>
     """, unsafe_allow_html=True)
+    import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+# Cargar el archivo CSV
+csv_url = '10 Campeones mas jugados worlds 2024 - Hoja1.csv' 
+df = pd.read_csv(csv_url)
+
+st.write("Datos del archivo CSV:")
+st.dataframe(df)
+
+fig = px.bar(df, x='Campeón', y='Winrate', hover_data=['Veces jugado', 'Veces baneado'], title="Winrate por Campeón")
+
+st.plotly_chart(fig)
+
     
     
 elif opcion == 'Acerca de':
