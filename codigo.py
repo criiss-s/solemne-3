@@ -81,7 +81,7 @@ elif opcion == 'Competitivo':
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     if uploaded_file is not None:
         try:
-            df = pd.read_csv(Champions_2024W(Hoja1).csv)              
+            df = pd.read_csv(Champions_2024W.csv)              
             if 'X' not in df.columns or 'Y' not in df.columns:
                 st.error("The CSV file must contain columns named 'X' and 'Y'.")
             else:
