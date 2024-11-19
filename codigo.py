@@ -80,7 +80,7 @@ elif opcion == 'Competitivo':
 
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     if uploaded_file is not None:
-        df = pd.read_csv(uploaded_file)
+        df = pd.read_csv(Champions_2024W(Hoja1).csv)
         chart = alt.Chart(df).mark_line().encode(
             x='X',  # Replace with your X column name
             y='Y'   # Replace with your Y column name
