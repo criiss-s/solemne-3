@@ -87,10 +87,6 @@ grafico = alt.Chart(df).mark_point().encode(
 
 st.altair_chart(grafico, use_container_width=True)
 
-
-
-    
-    
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
 
