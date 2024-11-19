@@ -76,17 +76,6 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
 
-# Cargar el archivo CSV
-csv_url = '10 Campeones mas jugados worlds 2024 - Hoja1.csv' 
-df = pd.read_csv(csv_url)
-
-st.write("Datos del archivo CSV:")
-st.dataframe(df)
-
-fig = px.bar(df, x='Campeón', y='Winrate', hover_data=['Veces jugado', 'Veces baneado'], title="Winrate por Campeón")
-
-st.plotly_chart(fig)
-
     
     
 elif opcion == 'Acerca de':
