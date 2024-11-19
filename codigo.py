@@ -80,13 +80,20 @@ elif opcion == 'Competitivo':
 
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     if uploaded_file is not None:
-        df = pd.read_csv(Champions_2024W(Hoja1).csv)
-        chart = alt.Chart(df).mark_line().encode(
-            x='X',  # Replace with your X column name
-            y='Y'   # Replace with your Y column name
-        )
-        st.altair_chart(chart, use_container_width=True)
-
+        try:
+            df = pd.read_csv(Champions_2024W(Hoja1).csv)              
+            if 'X' not in df.columns or 'Y' not in df.columns:
+                st.error("The CSV file must contain columns named 'X' and 'Y'.")
+            else:
+                df = df.dropna(subset=['X', 'Y'])  
+                st.dataframe(df.head()) # Preview data
+                chart = alt.Chart(df, title="My Chart").mark_line().encode(
+                    alt.X('X', title="X-axis label"),
+                    alt.Y('Y', title="Y-axis label")
+                )
+                st.altair_chart(chart, use_container_width=True)
+        except Exception as e:
+            st.error(f"Error reading the CSV file: {e}")
 
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
