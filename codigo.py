@@ -77,6 +77,27 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
 
+st.title('Gráfico de puntos a partir de un CSV')
+uploaded_file = st.file_uploader("Elige un archivo CSV", type="csv")
+
+if uploaded_file is not None:
+    # Leer el archivo CSV
+    data = pd.read_csv(Champions_2024W(Hoja1).csv)
+
+    # Mostrar los datos en la aplicación
+    st.write(data)
+
+    # Crear un gráfico de puntos (por ejemplo, Veces jugado vs Winrate)
+    scatter_plot = alt.Chart(data).mark_circle(size=60).encode(
+        x='Veces jugado',
+        y='Winrate',
+        tooltip=['Campeón', 'Veces jugado', 'Winrate']
+    ).interactive()
+
+    # Mostrar el gráfico en la aplicación de Streamlit
+    st.altair_chart(scatter_plot, use_container_width=True)
+
+
     
     
 elif opcion == 'Acerca de':
