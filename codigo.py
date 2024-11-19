@@ -76,24 +76,7 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Dentro del competitivo del league of legends se implementa una clase de bracket (Cuadro) el cual permite mostrar el progreso de los equipos a lo largo de un torneo, asi para que la gente sepa si su equipo favorito paso a la siguiente fase. El bracket mostrado corresponde al bracket suizo de los worlds 2024 con equipos reconocidos como G2, GenG, T1, FNC, etc. p>
     </div>
     """, unsafe_allow_html=True)
-     # ... (Your existing code for 'Competitivo' section) ...
 
-    uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-    if uploaded_file is not None:
-        try:
-            df = pd.read_csv(Champions_2024W.csv)              
-            if 'X' not in df.columns or 'Y' not in df.columns:
-                st.error("The CSV file must contain columns named 'X' and 'Y'.")
-            else:
-                df = df.dropna(subset=['X', 'Y'])  
-                st.dataframe(df.head()) # Preview data
-                chart = alt.Chart(df, title="My Chart").mark_line().encode(
-                    alt.X('X', title="X-axis label"),
-                    alt.Y('Y', title="Y-axis label")
-                )
-                st.altair_chart(chart, use_container_width=True)
-        except Exception as e:
-            st.error(f"Error reading the CSV file: {e}")
 
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
