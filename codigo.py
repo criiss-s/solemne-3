@@ -59,7 +59,7 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>El competitivo de League of Legends (LoL) se refiere a los torneos y ligas organizados por Riot Games donde equipos profesionales compiten por premios y reconocimiento. Estos torneos incluyen eventos regionales, nacionales e internacionales, como la League of Legends Championship Series (LCS), la League of Legends European Championship (LEC), y el Campeonato Mundial de League of Legends (Worlds)p>
     </div>
     """, unsafe_allow_html=True)
-    st.image("Equipos worlds1080x1350.jpg", width=300)
+    st.image("Equipos worlds1080x1350.jpg", width=550)
     
     
 elif opcion == 'Acerca de':
