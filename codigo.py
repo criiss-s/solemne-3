@@ -77,15 +77,9 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
 
-df = pd.read_csv('Champions_2024W(Hoja1).csv')  
 
-grafico = alt.Chart(df).mark_point().encode(
-    x='columna1:Q', 
-    y='columna2:Q',
-    color='columna3:N', 
-).interactive()
-
-st.altair_chart(grafico, use_container_width=True)
+elif opcion == 'Acerca de':
+    st.write('Aquí se mostraría la información adicional.')
 
 
 
