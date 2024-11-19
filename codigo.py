@@ -47,7 +47,7 @@ elif opcion == 'Competitivo':
     st.markdown(
     """
     <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">¿Qué es League of Legends?</h3>
+        <h3 style="color: white;">¿Que es el competitivo de league of legends?</h3>
     </div>
     """,
     unsafe_allow_html=True
