@@ -69,7 +69,6 @@ elif opcion == 'Competitivo':
     """,
     unsafe_allow_html=True
     )
-    st.image("Rangos Competitivos.png")
     
     st.markdown("""
     <div style="margin-left: -75px;">
@@ -78,6 +77,7 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Los rangos competitivos en League of Legends son una forma de clasificar a los jugadores según su habilidad y rendimiento en el juego. Estos rangos ayudan a emparejar a los jugadores con oponentes de habilidad similar para garantizar partidas justas y equilibradas. Aquí están los rangos competitivos de League of Legends, de menor a mayor:
     </div>
     """, unsafe_allow_html=True)
+    st.image("Rangos Competitivos.png")
     
     st.image("17285869617624.jpg")
     st.markdown(
