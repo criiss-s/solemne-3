@@ -37,8 +37,8 @@ def load_data():
 # Crear gráfico con Altair
 def create_chart(data):
     chart = alt.Chart(data).mark_bar().encode(
-        x='Campeón:O',  # Cambia esto a las columnas específicas de tu CSV
-        y='Veces jugado:Q',  # Cambia esto a las columnas específicas de tu CSV
+        x='Campeón',  # Cambia esto a las columnas específicas de tu CSV
+        y='Veces jugado',  # Cambia esto a las columnas específicas de tu CSV
         tooltip=['Campeón', 'Veces jugado']
     ).interactive()
     return chart
