@@ -69,6 +69,8 @@ elif opcion == 'Competitivo':
     """,
     unsafe_allow_html=True
     )
+    st.image("Rangos Competitivos.png")
+    
     st.markdown("""
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
