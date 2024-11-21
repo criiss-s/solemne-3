@@ -32,7 +32,23 @@ opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campe
 
 st.image("League-of-Legends-logo.png")
 # Cargar datos del CSV 
-@st.cache_data def load_data(): data = pd.DataFrame({ 'Posición': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'Campeón': ['K’Sante', 'Aatrox', 'Jax', 'Renekton', 'Rumble', 'Gnar', 'Ornn', 'Gwen', 'Jayce', 'Yone'], 'Veces jugado': [27, 26, 24, 23, 20, 7, 5, 4, 4, 3], 'Veces baneado': [15, 3, 25, 12, 46, 6, 4, 3, 8, 6], 'Winrate': [40.7, 53.8, 50, 39.1, 70, 71.4, 40, 25, 75, 100] }) return data
+@st.cache_data 
+def load_data(): 
+    data = pd.DataFrame({ 
+        'Posición': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 
+        'Campeón': ['K’Sante', 'Aatrox', 'Jax', 'Renekton', 'Rumble', 'Gnar', 'Ornn', 'Gwen', 'Jayce', 'Yone'], 
+        'Veces jugado': [27, 26, 24, 23, 20, 7, 5, 4, 4, 3], 
+        'Veces baneado': [15, 3, 25, 12, 46, 6, 4, 3, 8, 6], 
+        'Winrate': [40.7, 53.8, 50, 39.1, 70, 71.4, 40, 25, 75, 100] }) 
+    return data
+
+def create_chart(data): 
+    chart = alt.Chart(data).mark_bar().encode( 
+        x='Campeón:O', 
+        y='Veces jugado:Q', 
+        tooltip=['Campeón', 'Veces jugado'] 
+    ).interactive() 
+    return chart
 
 
 
