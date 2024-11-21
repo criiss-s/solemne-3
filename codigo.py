@@ -37,8 +37,8 @@ def load_data():
 # Crear gráfico con Altair
 def create_chart(data):
     chart = alt.Chart(data).mark_bar().encode(
-        x='Campeón',  # Cambia esto a las columnas específicas de tu CSV
-        y='Veces jugado',  # Cambia esto a las columnas específicas de tu CSV
+        x=alt.X('Campeón:O', title='Campeón'),  # Cambia esto a las columnas específicas de tu CSV
+        y=alt.Y('Veces jugado:Q', title='Veces jugado'),  # Cambia esto a las columnas específicas de tu CSV
         tooltip=['Campeón', 'Veces jugado']
     ).interactive()
     return chart
@@ -84,8 +84,15 @@ elif opcion == 'Competitivo':
     st.markdown("<h2 style='color: white;'>Estadísticas de Campeones</h2>", unsafe_allow_html=True)
     try:
         data = load_data()
-        chart = create_chart(data)
-        st.altair_chart(chart, use_container_width=True)
+        st.write("Datos cargados correctamente:")
+        st.write(data.head())  # Muestra las primeras filas del DataFrame para inspección
+
+        # Verificar nombres de columnas
+        if 'Campeón' in data.columns and 'Veces jugado' in data.columns:
+            chart = create_chart(data)
+            st.altair_chart(chart, use_container_width=True)
+        else:
+            st.error("El archivo CSV no contiene las columnas 'Campeón' y 'Veces jugado'. Verifique el nombre de las columnas.")
     except Exception as e:
         st.error(f"Error al cargar los datos del CSV: {e}")
 
