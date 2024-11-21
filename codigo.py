@@ -65,7 +65,7 @@ elif opcion == 'Competitivo':
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
     <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Los Worlds de League of Legends son uno de los eventos de esports más conocidos debido a su audiencia global enorme, alta competitividad, prestigio histórico desde 2011, impresionante producción, participación de equipos icónicos como T1 y G2 Esports, accesibilidad gratuita en múltiples plataformas de streaming y el involucramiento activo de la comunidad con eventos adicionales y contenido exclusivo. Estos factores combinados hacen que sean uno de los eventos más esperados y seguidos en el mundo de los esports.
+        <p style='color: white;'>Los Worlds de League of Legends son uno de los eventos de esports más conocidos debido a su audiencia global enorme, alta competitividad, prestigio histórico desde 2011, impresionante producción, participación de equipos icónicos como T1 y G2 Esports, accesibilidad gratuita en múltiples plataformas de streaming y el involucramiento activo de la comunidad con eventos adicionales y contenido exclusivo. Estos factores combinados hacen que sean uno de los eventos más esperados y seguidos en el mundo de los esports. En donde el ganador podra hacerse con la increible copa.
     </div>
     """, unsafe_allow_html=True)
     st.image("Copa Worlds.jpeg")
