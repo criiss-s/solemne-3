@@ -88,13 +88,16 @@ elif opcion == 'Competitivo':
         data = load_data()
         st.write("Datos cargados correctamente:")
         st.write(data.head())  # Muestra las primeras filas del DataFrame para inspección
+        
+        # Imprimir los nombres de las columnas
+        st.write("Columnas del DataFrame:", data.columns.tolist())
 
         # Verificar nombres de columnas
         if 'Campeón' in data.columns and 'Veces jugado' in data.columns:
             chart = create_chart(data)
             st.altair_chart(chart, use_container_width=True)
         else:
-            st.error("El archivo CSV no contiene las columnas 'Campeón' y 'Veces jugado'. Verifique el nombre de las columnas.")
+            st.error(f"El archivo CSV no contiene las columnas 'Campeón' y 'Veces jugado'. Las columnas disponibles son: {data.columns.tolist()}")
     except Exception as e:
         st.error(f"Error al cargar los datos del CSV: {e}")
 
