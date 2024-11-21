@@ -1,12 +1,9 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 import altair as alt
 import base64
 
-
-
-#fondo
+# Fondo
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -27,17 +24,44 @@ page_bg_img = f"""
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.sidebar.image("letras.png")
-opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
-
+opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de', 'Gráfico Interactivo'])
 
 st.image("League-of-Legends-logo.png")
 
+# Cargar datos del CSV
+@st.cache_data
+def load_data():
+    data = pd.read_csv('data.csv')  # Reemplaza 'data.csv' con el nombre de tu archivo CSV
+    return data
 
+# Crear gráfico con Altair
+def create_chart(data):
+    chart = alt.Chart(data).mark_bar().encode(
+        x='Campeón:O',
+        y='Veces jugado:Q',
+        tooltip=['Campeón', 'Veces jugado']
+    ).interactive()
+    return chart
+
+# Análisis de Equipos
+def mostrar_analisis_equipos():
+    st.markdown("<h2 style='color: white;'>Análisis de Equipos</h2>", unsafe_allow_html=True)
+    st.markdown("""
+    <p style='color: white;'>Analiza el rendimiento de los equipos más destacados, su historial en torneos recientes y sus jugadores estrella.</p>
+    """, unsafe_allow_html=True)
+    # Datos de ejemplo
+    equipos = pd.DataFrame({
+        'Equipo': ['G2 Esports', 'T1', 'Fnatic', 'Gen.G', 'DAMWON Gaming'],
+        'Partidas Jugadas': [20, 18, 22, 19, 21],
+        'Victorias': [15, 14, 12, 16, 13],
+        'Derrotas': [5, 4, 10, 3, 8]
+    })
+    st.table(equipos)
 
 if opcion == 'Información':
     st.markdown("<h1 style='color: white;'>Información</h1>", unsafe_allow_html=True)
     st.markdown("""
-    <p style='color: white;'>League of Legends es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games. Inspirándose en Defense of the Ancients, un mapa personalizado para Warcraft III, los fundadores de Riot buscaron desarrollar un juego independiente del mismo género. Desde su lanzamiento en octubre de 2009, LoL ha sido un juego gratuito y se monetiza a través de la compra de elementos para la personalización de personajes y otros accesorios. El juego está disponible para Microsoft Windows y macOS.</p>
+    <p style='color: white;'>League of Legends es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games...</p>
     """, unsafe_allow_html=True)
 elif opcion == 'Campeones':
     st.write('Aquí van los datos.')
@@ -45,44 +69,21 @@ elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
-    st.markdown(
-    """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">¿Que es el competitivo de league of legends?</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
     st.markdown("""
     <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>El competitivo de League of Legends (LoL) se refiere a los torneos y ligas organizados por Riot Games donde equipos profesionales compiten por premios y reconocimiento. Estos torneos incluyen eventos regionales, nacionales e internacionales, como la League of Legends Championship Series (LCS), la League of Legends European Championship (LEC), y el Campeonato Mundial de League of Legends (Worlds), todo esto se realiza en amplios lugares para que asi los fanaticos de este juego puedan asistir de forma presencial y vivir una experiencia inolvidable. p>
+        <h3 style="color: white;">¿Qué es el competitivo de League of Legends?</h3>
+        <p style='color: white;'>El competitivo de League of Legends (LoL) se refiere a los torneos y ligas organizados por Riot Games...</p>
     </div>
     """, unsafe_allow_html=True)
     st.image("17285869617624.jpg")
-    st.markdown(
-    """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">Brackets de Worlds</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Dentro del competitivo del league of legends se implementa una clase de bracket (Cuadro) el cual permite mostrar el progreso de los equipos a lo largo de un torneo, asi para que la gente sepa si su equipo favorito paso a la siguiente fase. El bracket mostrado corresponde al bracket suizo de los worlds 2024 con equipos reconocidos como G2, GenG, T1, FNC, etc. p>
-    </div>
-    """, unsafe_allow_html=True)
-
-
+    
+    # Añadir secciones adicionales
+    mostrar_analisis_equipos()
+    # Aquí podrías añadir más funciones como mostrar calendario, entrevistas, etc.
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
-
-
-
-
-
-
+elif opcion == 'Gráfico Interactivo':
+    st.markdown("<h1 style='color: white;'>Gráfico Interactivo</h1>", unsafe_allow_html=True)
+    data = load_data()
+    chart = create_chart(data)
+    st.altair_chart(chart, use_container_width=True)
