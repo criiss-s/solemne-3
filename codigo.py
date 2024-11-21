@@ -73,7 +73,7 @@ elif opcion == 'Competitivo':
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
     <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Los rangos competitivos son:
+        <p style='color: white;'>Los rangos competitivos en League of Legends son una forma de clasificar a los jugadores según su habilidad y rendimiento en el juego. Estos rangos ayudan a emparejar a los jugadores con oponentes de habilidad similar para garantizar partidas justas y equilibradas. Aquí están los rangos competitivos de League of Legends, de menor a mayor:
     </div>
     """, unsafe_allow_html=True)
     
