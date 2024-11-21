@@ -86,6 +86,10 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
     st.image("Tiers.jpg")
+
+
+elif opcion == 'Acerca de':
+    st.write('Aquí se mostraría la información adicional.')
     
     
     
