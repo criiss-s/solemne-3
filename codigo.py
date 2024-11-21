@@ -31,16 +31,18 @@ st.image("League-of-Legends-logo.png")
 # Cargar datos del CSV
 @st.cache_data
 def load_data():
-    data = pd.read_csv('Champions_2024W(Hoja1).csv', encoding='latin1')  # Añadido encoding='latin1'
+    data = pd.read_csv('Champions_2024W(Hoja1).csv', encoding='latin1')
     return data
 
-# Crear gráfico con Altair
+# Crear gráfico simple con Altair
 def create_chart(data):
     chart = alt.Chart(data).mark_bar().encode(
-        x=alt.X('Campeón:O', title='Campeón'),
-        y=alt.Y('Veces jugado:Q', title='Veces jugado'),
-        tooltip=['Campeón', 'Veces jugado']
-    ).interactive()
+        x='Campeón',
+        y='Veces jugado'
+    ).properties(
+        width=600,
+        height=400
+    )
     return chart
 
 # Análisis de Equipos
@@ -86,9 +88,6 @@ elif opcion == 'Competitivo':
         data = load_data()
         st.write("Datos cargados correctamente:")
         st.write(data.head())  # Muestra las primeras filas del DataFrame para inspección
-        
-        # Imprimir los nombres de las columnas
-        st.write("Columnas del DataFrame:", data.columns.tolist())
 
         # Verificar nombres de columnas
         if 'Campeón' in data.columns and 'Veces jugado' in data.columns:
