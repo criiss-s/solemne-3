@@ -31,7 +31,7 @@ st.image("League-of-Legends-logo.png")
 # Cargar datos del CSV
 @st.cache_data
 def load_data():
-    data = pd.read_csv('Champions_2024W(Hoja1).csv')  # Reemplaza con el nombre de tu archivo CSV
+    data = pd.read_csv('Champions_2024W(Hoja1).csv', encoding='latin1')  # Añadido encoding='latin1'
     return data
 
 # Crear gráfico con Altair
