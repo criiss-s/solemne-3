@@ -82,9 +82,12 @@ elif opcion == 'Competitivo':
     
     # Cargar los datos y crear el gráfico interactivo
     st.markdown("<h2 style='color: white;'>Estadísticas de Campeones</h2>", unsafe_allow_html=True)
-    data = load_data()
-    chart = create_chart(data)
-    st.altair_chart(chart, use_container_width=True)
+    try:
+        data = load_data()
+        chart = create_chart(data)
+        st.altair_chart(chart, use_container_width=True)
+    except Exception as e:
+        st.error(f"Error al cargar los datos del CSV: {e}")
 
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
