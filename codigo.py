@@ -89,23 +89,5 @@ elif opcion == 'Competitivo':
     
     
     
-    st.markdown(
-    """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">Brackets de Worlds</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Dentro del competitivo del league of legends se implementa una clase de bracket (Cuadro) el cual permite mostrar el progreso de los equipos a lo largo de un torneo, asi para que la gente sepa si su equipo favorito paso a la siguiente fase. El bracket mostrado corresponde al bracket suizo de los worlds 2024 con equipos reconocidos como G2, GenG, T1, FNC, etc. p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.image("17285869617624.jpg")
-
-
-elif opcion == 'Acerca de':
-    st.write('Aquí se mostraría la información adicional.')
+    
+    
