@@ -73,7 +73,7 @@ elif opcion == 'Competitivo':
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
     <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>jasdjasjfajsfjashjjasfasjflsahfjas p>
+        <p style='color: white;'>Los rangos competitivos son.p>
     </div>
     """, unsafe_allow_html=True)
     
