@@ -72,7 +72,7 @@ elif opcion == 'Competitivo':
                                  Estos factores combinados hacen que los Worlds de League of Legends sean uno de los eventos de esports más esperados y seguidos en el mundo.
     </div>
     """, unsafe_allow_html=True)
-    st.image("worlds 2024.jpg")
+    st.image("Copa Worlds.jpeg")
 
     st.markdown(
     """
