@@ -37,8 +37,8 @@ def load_data():
 # Crear gráfico con Altair
 def create_chart(data):
     chart = alt.Chart(data).mark_bar().encode(
-        x=alt.X('Campeón:O', title='Campeón'),  # Cambia esto a las columnas específicas de tu CSV
-        y=alt.Y('Veces jugado:Q', title='Veces jugado'),  # Cambia esto a las columnas específicas de tu CSV
+        x=alt.X('Campeón:O', title='Campeón'),
+        y=alt.Y('Veces jugado:Q', title='Veces jugado'),
         tooltip=['Campeón', 'Veces jugado']
     ).interactive()
     return chart
@@ -86,6 +86,9 @@ elif opcion == 'Competitivo':
         data = load_data()
         st.write("Datos cargados correctamente:")
         st.write(data.head())  # Muestra las primeras filas del DataFrame para inspección
+        
+        # Imprimir los nombres de las columnas
+        st.write("Columnas del DataFrame:", data.columns.tolist())
 
         # Verificar nombres de columnas
         if 'Campeón' in data.columns and 'Veces jugado' in data.columns:
