@@ -78,6 +78,30 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
     st.image("Rangos Competitivos.png")
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Hierro (Iron): Este es el rango más bajo, donde los jugadores están aprendiendo lo básico del juego.
+
+Bronce (Bronze): Jugadores que tienen un entendimiento básico del juego pero todavía están desarrollando sus habilidades.
+
+Plata (Silver): Jugadores promedio que tienen una buena comprensión del juego pero aún están trabajando en sus habilidades.
+
+Oro (Gold): Jugadores por encima del promedio, con una comprensión sólida y habilidades decentes.
+
+Platino (Platinum): Jugadores habilidosos con una comprensión avanzada del juego.
+
+Diamante (Diamond): Jugadores altamente habilidosos, entre los mejores del servidor.
+
+Maestro (Master): Jugadores de élite, entre los mejores del servidor.
+
+Gran Maestro (Grandmaster): Jugadores que están muy cerca del nivel más alto.
+
+Challenger: Los mejores jugadores del servidor, en la cúspide del competitivo.
+    </div>
+    """, unsafe_allow_html=True)
+    
     
     st.image("17285869617624.jpg")
     st.markdown(
