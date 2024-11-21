@@ -60,7 +60,19 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>El competitivo de League of Legends (LoL) se refiere a los torneos y ligas organizados por Riot Games donde equipos profesionales compiten por premios y reconocimiento. Estos torneos incluyen eventos regionales, nacionales e internacionales, como la League of Legends Championship Series (LCS), la League of Legends European Championship (LEC), y el Campeonato Mundial de League of Legends (Worlds), todo esto se realiza en amplios lugares para que asi los fanaticos de este juego puedan asistir de forma presencial y vivir una experiencia inolvidable.
     </div>
     """, unsafe_allow_html=True)
-    st.image("Banner worlds.jpg")
+    
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Los Worlds de League of Legends son uno de los eventos de esports más conocidos por varias razones. Tienen una audiencia global enorme, ya que League of Legends cuenta con millones de jugadores y fanáticos alrededor del mundo. Además, ofrecen una alta competitividad al reunir a los mejores equipos de todas las regiones, garantizando enfrentamientos de altísimo nivel.
+                                 El prestigio histórico del evento también juega un papel importante. Desde su inicio en 2011, los Worlds se han establecido como el objetivo más codiciado en la carrera de cualquier jugador profesional de League of Legends. La impresionante producción del evento, que incluye ceremonias de apertura espectaculares, efectos visuales deslumbrantes y actuaciones musicales, lo convierte en un espectáculo atractivo no solo para los jugadores, sino también para los espectadores.
+                                 La participación de equipos icónicos y jugadores famosos añade un extra de emoción y expectación. Equipos legendarios como T1, Fnatic y G2 Esports, y jugadores de renombre, atraen a una gran cantidad de seguidores. Además, la accesibilidad del evento, que se transmite gratuitamente en múltiples plataformas de streaming, permite que los fanáticos de todo el mundo puedan seguir las partidas en tiempo real.
+                                 Por último, el involucramiento de la comunidad es un factor clave. Riot Games, la compañía detrás de League of Legends, se asegura de involucrar a la comunidad con eventos adicionales, contenido exclusivo y skins temáticas durante los Worlds, lo que incrementa la participación y el entusiasmo de los jugadores.
+                                 Estos factores combinados hacen que los Worlds de League of Legends sean uno de los eventos de esports más esperados y seguidos en el mundo.
+    </div>
+    """, unsafe_allow_html=True)
+    st.image("worlds 2024.jpg")
 
     st.markdown(
     """
