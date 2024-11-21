@@ -24,21 +24,21 @@ page_bg_img = f"""
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.sidebar.image("letras.png")
-opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de', 'Gráfico Interactivo'])
+opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
 st.image("League-of-Legends-logo.png")
 
 # Cargar datos del CSV
 @st.cache_data
 def load_data():
-    data = pd.read_csv('data.csv')  # Reemplaza 'data.csv' con el nombre de tu archivo CSV
+    data = pd.read_csv('Champions_2024W(Hoja1).csv')  # Reemplaza con el nombre de tu archivo CSV
     return data
 
 # Crear gráfico con Altair
 def create_chart(data):
     chart = alt.Chart(data).mark_bar().encode(
-        x='Campeón:O',
-        y='Veces jugado:Q',
+        x='Campeón:O',  # Cambia esto a las columnas específicas de tu CSV
+        y='Veces jugado:Q',  # Cambia esto a las columnas específicas de tu CSV
         tooltip=['Campeón', 'Veces jugado']
     ).interactive()
     return chart
@@ -79,11 +79,12 @@ elif opcion == 'Competitivo':
     
     # Añadir secciones adicionales
     mostrar_analisis_equipos()
-    # Aquí podrías añadir más funciones como mostrar calendario, entrevistas, etc.
-elif opcion == 'Acerca de':
-    st.write('Aquí se mostraría la información adicional.')
-elif opcion == 'Gráfico Interactivo':
-    st.markdown("<h1 style='color: white;'>Gráfico Interactivo</h1>", unsafe_allow_html=True)
+    
+    # Cargar los datos y crear el gráfico interactivo
+    st.markdown("<h2 style='color: white;'>Estadísticas de Campeones</h2>", unsafe_allow_html=True)
     data = load_data()
     chart = create_chart(data)
     st.altair_chart(chart, use_container_width=True)
+
+elif opcion == 'Acerca de':
+    st.write('Aquí se mostraría la información adicional.')
