@@ -121,7 +121,8 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Lee "Faker" Sang-hyeok es universalmente aclamado como el mejor jugador de League of Legends de todos los tiempos. Conocido como el "Rey Demonio Indomable", Faker ha dejado una marca indeleble en el competitivo de esports gracias a su destreza sin igual, su capacidad para realizar jugadas decisivas en momentos cruciales y su impresionante consistencia a lo largo de su carrera. Además de su éxito en torneos, Faker es conocido por su humildad y dedicación. Ha sido una fuente constante de inspiración para jugadores de todo el mundo, demostrando que el verdadero talento viene acompañado de una ética de trabajo inquebrantable y un deseo interminable de mejorar.El legado de Faker no solo se mide en títulos y premios, sino en el impacto duradero que ha tenido en la comunidad de esports. Ha elevado el estándar del juego competitivo y ha establecido un modelo a seguir para futuras generaciones de jugadores. Su nombre es sinónimo de excelencia, y su influencia seguirá siendo sentida mucho después de que se retire Faker es, sin lugar a dudas, el epítome de la grandeza en el mundo de los esports, y su historia es un testimonio del poder de la perseverancia, el talento y la pasión
     </div>
     """, unsafe_allow_html=True)
-    st.image("Faker.jpg")
+
+
 
 
 elif opcion == 'Acerca de':
