@@ -96,7 +96,7 @@ elif opcion == 'Competitivo':
     """, unsafe_allow_html=True)
     st.image("Tiers.jpg")
 
- st.markdown(
+    st.markdown(
     """
     <div style="margin-left: -75px; margin-right: -75px;">
         <h3 style="color: white;">Videos</h3>
