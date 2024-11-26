@@ -126,7 +126,6 @@ elif opcion == 'Competitivo':
 
     video_url = "https://www.youtube.com/watch?v=rVnbFhnn5z4"
     st.video(video_url)
-
     st.markdown("""
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
