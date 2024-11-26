@@ -106,6 +106,14 @@ elif opcion == 'Competitivo':
     )
     video_url = "https://www.youtube.com/watch?v=XSe08RXp1P8"
     st.video(video_url)
+    st.markdown(
+    """
+    <div style="margin-left: -75px; margin-right: -75px;">
+        <h3 style="color: white;">El mejor jugador de todos los tiempos</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
 
 
 elif opcion == 'Acerca de':
