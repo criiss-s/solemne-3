@@ -122,6 +122,8 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
 
+    st.image("Faker.jpg")
+
 
 
 
