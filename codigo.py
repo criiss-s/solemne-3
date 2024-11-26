@@ -104,6 +104,8 @@ elif opcion == 'Competitivo':
     """,
     unsafe_allow_html=True
     )
+    video_url = "https://www.youtube.com/watch?v=XSe08RXp1P8"
+    st.video(video_url)
 
 
 elif opcion == 'Acerca de':
