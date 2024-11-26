@@ -127,6 +127,14 @@ elif opcion == 'Competitivo':
     video_url = "https://www.youtube.com/watch?v=rVnbFhnn5z4"
     st.video(video_url)
 
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Desde su debut en 2013, Faker ha redefinido lo que significa ser un profesional en League of Legends. Sus habilidades mecánicas y su comprensión profunda del juego le han permitido dominar la mid lane como ningún otro jugador. Ha llevado a su equipo, T1 (anteriormente SK Telecom T1), a múltiples títulos, incluyendo cinco campeonatos mundiales (2013, 2015, 2016, 2023 y 2024), convirtiéndolo en una leyenda viviente.
+    </div>
+    """, unsafe_allow_html=True)
+
 
 
 
