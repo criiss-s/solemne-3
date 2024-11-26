@@ -124,6 +124,9 @@ elif opcion == 'Competitivo':
 
     st.image("Faker.jpg")
 
+    video_url = "https://www.youtube.com/watch?v=rVnbFhnn5z4"
+    st.video(video_url)
+
 
 
 
